@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">AppGitHubUser</string>
+
+    <string name="username">Username</string>
+    <string name="search">Search</string>
+    <string name="menu_1">Menu 1</string>
+    <string name="menu_2">Menu 2</string>
+    <string name="search_hint">Masukkan kata</string>
+
+    <string name="tab_text_1">Followers</string>
+    <string name="tab_text_2">Following</string>
+    <string name="content_tab_home">Welcome Home</string>
+    <string name="content_tab_profile">Change your Profile here</string>
+    <string name="content_tab_text">This is Tab %1$d</string>
+
+    <string name="dark_mode">Dark Mode</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="setting">Setting</string>
+    <string name="favorite">Favorite</string>
+</resources>

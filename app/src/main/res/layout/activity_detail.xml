@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
+    tools:context=".ui.detail.DetailActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/photoProfile"
+        android:layout_width="113dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="16dp"
+        app:civ_border_width="4dp"
+        app:civ_border_color="@color/purple_44"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.101"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/namaProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ini nama..."
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/photoProfile"
+        app:layout_constraintEnd_toEndOf="@+id/photoProfile"
+        app:layout_constraintStart_toStartOf="@+id/photoProfile"
+        app:layout_constraintHorizontal_bias="0.504"/>
+
+
+    <TextView
+        android:id="@+id/usernameProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ini username..."
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/namaProfile"
+        app:layout_constraintStart_toStartOf="@+id/namaProfile"
+        app:layout_constraintTop_toBottomOf="@+id/namaProfile"
+        app:layout_constraintHorizontal_bias="0.518" />
+
+    <TextView
+        android:id="@+id/followers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="@+id/tvFollowers"
+        app:layout_constraintStart_toStartOf="@+id/tvFollowers"
+        app:layout_constraintTop_toBottomOf="@+id/tvFollowers" />
+
+    <TextView
+        android:id="@+id/following"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@+id/tvFollowing"
+        app:layout_constraintEnd_toEndOf="@+id/tvFollowing"
+        app:layout_constraintStart_toStartOf="@+id/tvFollowing"/>
+
+    <TextView
+        android:id="@+id/tvFollowers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="16dp"
+        android:text="followers"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameProfile"
+        app:layout_constraintVertical_bias="0.345" />
+
+    <TextView
+        android:id="@+id/tvFollowing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="following"
+        android:textStyle="bold"
+        android:layout_marginEnd="90dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvFollowers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintTop_toTopOf="@+id/tvFollowers"
+        app:layout_constraintVertical_bias="0.346" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:tabIndicatorColor="@color/white"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/following"
+        app:tabTextColor="@android:color/white" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabs">
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+    <ProgressBar
+        android:id="@+id/pbUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tabs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tabs"
+        app:srcCompat="@drawable/baseline_favorite_border_24"
+        android:tint="@color/white" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
